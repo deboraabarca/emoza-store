@@ -1,7 +1,7 @@
 # 🚀 Emoza - Tienda Online de Fragancias
 ## 📷 Vista del proyecto
 
-![vista del proyecto](readme-emoza.png)
+![vista del proyecto](./readme-emoza.png)
 
 ## 🖊️ Descripción 
 
