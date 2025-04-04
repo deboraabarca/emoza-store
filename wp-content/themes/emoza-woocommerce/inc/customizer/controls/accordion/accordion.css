@@ -1,0 +1,58 @@
+.emoza-accordion-hide {
+    display: none;
+}
+
+.emoza-accordion-title {
+    position: relative;
+    display: block;
+    background: #FFF;
+    padding: 13px 20px;
+    text-decoration: none;
+    color: #212121;
+    font-weight: 600;
+}
+
+.emoza-accordion-title:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-right: 2px solid #212121;
+    border-bottom: 2px solid #212121;
+    transform: rotate(45deg) translate3d(0, -50%, 0);
+    width: 5px;
+    height: 5px;
+    transform-origin: 50% 0%;
+}
+
+.emoza-accordion-title.expanded:after {
+    transform: rotate(-135deg) translate3d(0, -50%, 0);
+}
+
+.customize-control-emoza-accordion-item-wrapper {
+    margin-bottom: 0;
+}
+
+.emoza-accordion-item {
+    background: #e8e8e8;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.emoza-accordion-item + .customize-control:not(.emoza-accordion-item),
+.customize-control:not(.emoza-accordion-item) + .customize-control-emoza-accordion-item-wrapper {
+    margin-top: 15px;
+}
+
+.emoza-accordion-first-item {
+    padding-top: 23px;
+}
+
+.emoza-accordion-last-item {
+    padding-bottom: 23px;
+}
+
+.emoza-accordion-last-item.emoza-accordion-hide + .customize-control-emoza-accordion-item-wrapper {
+    margin-top: 15px;
+}

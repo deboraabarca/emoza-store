@@ -1,0 +1,115 @@
+/*
+ * Header/Footer Builder
+ * Customize Preview
+ */
+.ehfb .customize-partial-edit-shortcut button,
+.ehfb-mobile_offcanvas .customize-partial-edit-shortcut button,
+.customize-partial-edit-shortcut button.ehfb-item-customizer-focus {
+  border-radius: 0;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  min-width: 23px;
+  min-height: 23px;
+  width: 23px;
+  height: 23px;
+}
+.ehfb .customize-partial-edit-shortcut button svg,
+.ehfb-mobile_offcanvas .customize-partial-edit-shortcut button svg,
+.customize-partial-edit-shortcut button.ehfb-item-customizer-focus svg {
+  min-width: 15px;
+  min-height: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.ehfb .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas .customize-partial-edit-shortcut {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: ease opacity 300ms;
+  transition: ease opacity 300ms;
+}
+.ehfb .customize-partial-edit-shortcut.ehfb-customize-partial-edit-column-shortcut,
+.ehfb-mobile_offcanvas .customize-partial-edit-shortcut.ehfb-customize-partial-edit-column-shortcut {
+  right: -7px;
+  left: auto;
+}
+.ehfb .ehfb-column:hover > .customize-partial-edit-shortcut,
+.ehfb .ehfb-builder-item:hover > .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas .ehfb-column:hover > .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas .ehfb-builder-item:hover > .customize-partial-edit-shortcut {
+  opacity: 1;
+  visibility: visible;
+}
+.ehfb .ehfb-builder-item,
+.ehfb-mobile_offcanvas .ehfb-builder-item {
+  position: relative;
+}
+.ehfb .ehfb-builder-item .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas .ehfb-builder-item .customize-partial-edit-shortcut {
+  left: 30px;
+}
+.ehfb .ehfb-column > .customize-partial-edit-shortcut svg,
+.ehfb-mobile_offcanvas .ehfb-column > .customize-partial-edit-shortcut svg {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+  top: -2px;
+  position: relative;
+}
+.ehfb:hover .ehfb-mobile-offcanvas-rows > .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas:hover .ehfb-mobile-offcanvas-rows > .customize-partial-edit-shortcut {
+  opacity: 1;
+  visibility: visible;
+}
+
+div[data-customize-partial-type=nav_menu_instance] > .customize-partial-edit-shortcut,
+#site-navigation .customize-partial-edit-shortcut-button,
+#site-navigation-mobile .customize-partial-edit-shortcut-button {
+  display: none;
+}
+
+.ehfb-row-wrapper,
+.ehfb-mobile_offcanvas,
+.ehfb-column {
+  position: relative;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  -webkit-transition: ease outline 300ms;
+  transition: ease outline 300ms;
+}
+.ehfb-row-wrapper > .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas > .customize-partial-edit-shortcut,
+.ehfb-column > .customize-partial-edit-shortcut {
+  top: 0;
+  left: 30px;
+}
+.ehfb-row-wrapper:hover,
+.ehfb-mobile_offcanvas:hover,
+.ehfb-column:hover {
+  outline-color: #007cba;
+}
+.ehfb-row-wrapper:hover > .customize-partial-edit-shortcut,
+.ehfb-mobile_offcanvas:hover > .customize-partial-edit-shortcut,
+.ehfb-column:hover > .customize-partial-edit-shortcut {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ehfb-mobile_offcanvas .ehfb-mobile-offcanvas-rows > .customize-partial-edit-shortcut button {
+  top: -30px;
+  left: -30px;
+}
+
+@media (max-width: 800px) {
+  .ehfb .ehfb-builder-item[class*=ehfb-component-] .customize-partial-edit-shortcut button,
+  .ehfb .ehfb-builder-item[class*=ehfb-component-] .widget .customize-partial-edit-shortcut button {
+    left: 0;
+  }
+}
+.ehfb-hidden-widgets {
+  display: none;
+}

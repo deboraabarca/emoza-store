@@ -1,0 +1,2348 @@
+/**
+ * Theme Dashboard
+ *
+ */
+/* Helpers */
+.em-font-size-20px {
+  font-size: 20px !important;
+  line-height: 24px !important;
+}
+
+.em-m-0 {
+  margin: 0 !important;
+}
+
+.em-mt-0 {
+  margin-top: 0 !important;
+}
+
+.em-mt-10px {
+  margin-top: 10px !important;
+}
+
+.em-mt-20px {
+  margin-top: 20px !important;
+}
+
+.em-mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.em-mb-10px {
+  margin-bottom: 10px !important;
+}
+
+.em-mb-20px {
+  margin-bottom: 20px !important;
+}
+
+.em-pt-0 {
+  padding-top: 0 !important;
+}
+
+.em-pl-0 {
+  padding-left: 0 !important;
+}
+
+.em-p-relative {
+  position: relative;
+}
+
+.em-d-none {
+  display: none !important;
+}
+
+.em-d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.em-justify-content-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.em-align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.em-zindex-2 {
+  z-index: 2;
+}
+
+.em-font-weight-500 {
+  font-weight: 500;
+}
+
+.em-border-color-primary {
+  border-color: #2271b1 !important;
+}
+
+.em-text-color-grey {
+  color: #757575 !important;
+}
+
+.em-text-decoration-none {
+  text-decoration: none !important;
+}
+
+/* Animations */
+@-webkit-keyframes emoza-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes emoza-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/* Grid */
+.emoza-dashboard-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1280px) {
+  .emoza-dashboard-container {
+    max-width: 1280px;
+  }
+}
+.emoza-dashboard-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.emoza-dashboard-column {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .emoza-dashboard-column.emoza-dashboard-column-4 {
+    -ms-flex-preferred-size: calc(50% - 10px);
+        flex-basis: calc(50% - 10px);
+  }
+}
+@media (min-width: 1025px) {
+  .emoza-dashboard-column.emoza-dashboard-column-2 {
+    -ms-flex-preferred-size: calc(16.6666% - 10px);
+        flex-basis: calc(16.6666% - 10px);
+  }
+  .emoza-dashboard-column.emoza-dashboard-column-3 {
+    -ms-flex-preferred-size: calc(30% - 10px);
+        flex-basis: calc(30% - 10px);
+  }
+  .emoza-dashboard-column.emoza-dashboard-column-4 {
+    -ms-flex-preferred-size: calc(33.333333% - 14px);
+        flex-basis: calc(33.333333% - 14px);
+  }
+  .emoza-dashboard-column.emoza-dashboard-column-9 {
+    -ms-flex-preferred-size: calc(70% - 10px);
+        flex-basis: calc(70% - 10px);
+  }
+  .emoza-dashboard-column.emoza-dashboard-column-10 {
+    -ms-flex-preferred-size: calc(83.333% - 10px);
+        flex-basis: calc(83.333% - 10px);
+  }
+}
+@media (min-width: 1600px) {
+  .emoza-dashboard-column.emoza-dashboard-column-3 {
+    -ms-flex-preferred-size: calc(25% - 10px);
+        flex-basis: calc(25% - 10px);
+  }
+  .emoza-dashboard-column.emoza-dashboard-column-9 {
+    -ms-flex-preferred-size: calc(75% - 10px);
+        flex-basis: calc(75% - 10px);
+  }
+}
+/* Hide Notices */
+body.toplevel_page_emoza-dashboard #wpbody-content .notice,
+body.toplevel_page_emoza-dashboard #wpbody-content div.updated,
+body.toplevel_page_emoza-dashboard #wpbody-content div.error {
+  display: none !important;
+}
+
+/* General */
+a { text-decoration: none; }
+span.dashicons.dashicons-lock {
+  font-size: 20px;
+}
+.emoza-dashboard {
+  padding: 20px 20px 20px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.emoza-dashboard * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.emoza-dashboard * *:before,
+.emoza-dashboard * *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.emoza-dashboard figure {
+  margin: 0;
+}
+.emoza-dashboard figure img {
+  vertical-align: top;
+}
+.emoza-dashboard img {
+  max-width: 100%;
+  height: auto;
+}
+.emoza-dashboard .button {
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.emoza-dashboard .button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard .button .dashicons {
+  margin-right: 2px;
+}
+.emoza-dashboard .button.emwc-demo-preview-button, .emoza-dashboard .button.emwc-demo-remove-button, .emoza-dashboard .button.emwc-import-open-button, .emoza-dashboard .button.emwc-preview-cancel-button, .emoza-dashboard .button.emwc-demo-pro-link-button {
+  padding: 6px 20px !important;
+}
+.emoza-dashboard .buttondisabled, .emoza-dashboard .button.disabled {
+  pointer-events: none;
+}
+.emoza-dashboard .button-medium {
+  padding: 8px 16px;
+}
+.emoza-dashboard .button-warning {
+  color: #fff;
+  border-color: #d63638;
+  background-color: #d63638;
+}
+.emoza-dashboard .button-warning:hover, .emoza-dashboard .button-warning:focus, .emoza-dashboard .button-warning:active {
+  color: #fff;
+  border-color: #d42b2e;
+  background-color: #d42b2e;
+}
+.emoza-dashboard .button-simple {
+  color: #2271b1;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.emoza-dashboard .button-simple:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard .button-simple span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.emoza-dashboard .button-simple i {
+  font-size: 14px;
+}
+.emoza-dashboard .button-text {
+  color: #2271b1;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+}
+.emoza-dashboard .button-text i {
+  font-size: 18px;
+  line-height: 24px;
+}
+.emoza-dashboard .button-text:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard .button-info {
+  color: #bbb;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+}
+.emoza-dashboard .button-info i {
+  font-size: 18px;
+  line-height: 24px;
+}
+.emoza-dashboard .button-info:hover {
+  color: #777;
+}
+.emoza-dashboard .button-info:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard .button-disabled {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.emoza-dashboard .button-pro-support {
+  color: #fff;
+  border-color: #3fb28f;
+  background-color: #3fb28f;
+}
+.emoza-dashboard .button-pro-support:hover, .emoza-dashboard .button-pro-support:focus, .emoza-dashboard .button-pro-support:active {
+  color: #fff;
+  border-color: #3caa89;
+  background-color: #3caa89;
+}
+.emoza-dashboard .button-outline {
+  color: #2271b1;
+  border-color: #2271b1;
+  background: transparent;
+}
+.emoza-dashboard .dashicons {
+  width: auto;
+  height: auto;
+  font-size: inherit;
+}
+.emoza-dashboard .dashicons-update-alt {
+  -webkit-animation: emoza-spin 4s linear infinite;
+          animation: emoza-spin 4s linear infinite;
+  margin-right: 4px;
+}
+
+.emoza-ajax-progress {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.emoza-dashboard-badge {
+  color: #99A5B8;
+  padding: 3px 6px;
+  border: 1px solid #DFDFDF;
+  border-radius: 2px;
+  font-weight: 700;
+}
+.emoza-dashboard-badge.emoza-dashboard-badge-pro {
+  color: #2271b1;
+  border-color: #2271b1;
+}
+
+.emoza-dashboard-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: #757575;
+  text-decoration: none;
+  -webkit-transition: ease color 300ms, ease opacity 300ms;
+  transition: ease color 300ms, ease opacity 300ms;
+}
+.emoza-dashboard-link.emoza-dashboard-link-success {
+  color: #3FB28F !important;
+  text-decoration: underline;
+}
+.emoza-dashboard-link.emoza-dashboard-link-danger {
+  color: #f34343 !important;
+}
+.emoza-dashboard-link.emoza-dashboard-link-info {
+  color: #2271b1 !important;
+  text-decoration: underline;
+}
+.emoza-dashboard-link:hover, .emoza-dashboard-link:focus, .emoza-dashboard-link:active {
+  color: #2271b1;
+  text-decoration: underline;
+}
+.emoza-dashboard-link:hover.emoza-dashboard-link-success, .emoza-dashboard-link:focus.emoza-dashboard-link-success, .emoza-dashboard-link:active.emoza-dashboard-link-success {
+  color: #4ba78b !important;
+}
+.emoza-dashboard-link:hover.emoza-dashboard-link-danger, .emoza-dashboard-link:focus.emoza-dashboard-link-danger, .emoza-dashboard-link:active.emoza-dashboard-link-danger {
+  color: #fd3c3c !important;
+}
+.emoza-dashboard-link.loading {
+  outline: none;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.emoza-dashboard-external-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 500;
+  color: #2271b1;
+  white-space: nowrap;
+  -webkit-transition: ease opacity 300ms;
+  transition: ease opacity 300ms;
+}
+.emoza-dashboard-external-link svg {
+  position: relative;
+  top: 1px;
+}
+.emoza-dashboard-external-link:hover, .emoza-dashboard-external-link:focus, .emoza-dashboard-external-link:active {
+  color: #2271b1;
+  opacity: 0.7;
+}
+
+.emoza-dashboard-pro-tooltip {
+  position: relative;
+}
+.emoza-dashboard-pro-tooltip:before {
+  content: attr(data-tooltip-message);
+  position: absolute;
+  bottom: calc(100% + 11px);
+  left: 50%;
+  color: #FFF;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 3px 6px;
+  background-color: #1E1E1E;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate3d(-50%, 6px, 0);
+          transform: translate3d(-50%, 6px, 0);
+  -webkit-transition: ease opacity 300ms, ease transform 300ms;
+  transition: ease opacity 300ms, ease transform 300ms;
+  z-index: 2;
+}
+.emoza-dashboard-pro-tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-color: #1E1E1E transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate3d(-50%, 6px, 0);
+          transform: translate3d(-50%, 6px, 0);
+  -webkit-transition: ease opacity 300ms, ease transform 300ms;
+  transition: ease opacity 300ms, ease transform 300ms;
+  z-index: 2;
+}
+.emoza-dashboard-pro-tooltip:hover:before, .emoza-dashboard-pro-tooltip:hover:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+}
+
+.emoza-dashboard-activate-button,
+.emoza-dashboard-deactivate-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.emoza-dashboard-activate-button i,
+.emoza-dashboard-deactivate-button i {
+  text-decoration: none;
+}
+.emoza-dashboard-activate-button.loading,
+.emoza-dashboard-deactivate-button.loading {
+  text-decoration: none;
+}
+
+.emoza-dahsboard-modules-global-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all {
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  text-decoration: none;
+  -webkit-transition: ease color 300ms, ease background-color 300ms;
+  transition: ease color 300ms, ease background-color 300ms;
+}
+.emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-activate-all {
+  color: #FFF;
+  background-color: #3FB28F;
+  border-color: #3FB28F;
+}
+.emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-activate-all:hover, .emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-activate-all:focus, .emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-activate-all:active {
+  background-color: #4bc29e;
+}
+.emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-deactivate-all {
+  color: #FA1212;
+  background-color: #FFECEC;
+  border-color: #FFECEC;
+}
+.emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-deactivate-all:hover, .emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-deactivate-all:focus, .emoza-dahsboard-modules-global-actions .emoza-dashboard-module-activation-all.emoza-dahsboard-modules-deactivate-all:active {
+  background-color: #f8e0e0;
+}
+
+/* Emoza Dashboard Top Bar */
+.emoza-dashboard-top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FFF;
+  margin: -20px -20px 20px -20px;
+  padding: 18px 20px;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-top-bar-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-top-bar-infos .emoza-dashboard-top-bar-info-item {
+  position: relative;
+  padding: 0 10px;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-top-bar-infos .emoza-dashboard-top-bar-info-item + .emoza-dashboard-top-bar-info-item:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 17px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-left: 1px solid #F0F0F0;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-version {
+  font-size: 13px;
+  line-height: 13px;
+  color: #97A3B6;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-version strong {
+  position: relative;
+  top: 1px;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-version .emoza-dashboard-badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 5px;
+  font-size: 9px;
+  line-height: 10px;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-notifications {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #DFDFDF;
+  border-radius: 35px;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-notifications .emoza-dashboard-notifications-count {
+  position: absolute;
+  top: -8px;
+  right: -7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: #FFF;
+  background-color: #FA1212;
+  border-radius: 35px;
+  font-size: 10px;
+  line-height: 1;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-notifications.read .emoza-dashboard-notifications-count {
+  display: none;
+}
+.emoza-dashboard-top-bar .emoza-dashboard-theme-website {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2271b1;
+  text-decoration: none;
+}
+
+/* Emoza Dashboard Tabs Nav Items */
+.emoza-dashboard-tabs-nav {
+  padding: 0 20px;
+  margin-bottom: -100%;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+.emoza-dashboard-tabs-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 16px;
+  color: #6D7175;
+  text-decoration: none;
+  -webkit-transition: ease color 300ms;
+  transition: ease color 300ms;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  border-radius: 4px 4px 0 0;
+}
+.emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link {
+  color: #2271b1;
+  font-weight: 500;
+}
+.emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link:after {
+  background-color: #2271b1;
+}
+.emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link, .emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link, .emoza-dashboard-tabs-nav .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link {
+  color: #2271b1;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  padding: 9px 16px;
+  border-bottom: 0;
+  color: #1e1e1e;
+  -webkit-transition: ease color 200ms;
+  transition: ease color 200ms;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link svg {
+  margin-right: 8px;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link svg path {
+  -webkit-transition: ease fill 200ms;
+  transition: ease fill 200ms;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link:after {
+  content: none;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item .emoza-dashboard-tabs-nav-link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 4px;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: ease opacity 200ms;
+  transition: ease opacity 200ms;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link {
+  color: #757575;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link svg path, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link svg path, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link svg path {
+  fill: #757575;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link svg.stroke-based path, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link svg.stroke-based line, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link svg.stroke-based rect, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link svg.stroke-based path, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link svg.stroke-based line, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link svg.stroke-based rect, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link svg.stroke-based path, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link svg.stroke-based line, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link svg.stroke-based rect {
+  fill: none;
+  stroke: #757575;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:hover .emoza-dashboard-tabs-nav-link:before, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:focus .emoza-dashboard-tabs-nav-link:before, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item:active .emoza-dashboard-tabs-nav-link:before {
+  background-color: #e1e1e1;
+  opacity: 1;
+  visibility: visible;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link {
+  color: #2271b1;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link svg path {
+  fill: #2271b1;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link svg.stroke-based path, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link svg.stroke-based line, .emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link svg.stroke-based rect {
+  fill: none;
+  stroke: #2271b1;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-with-icons .emoza-dashboard-tabs-nav-item.active .emoza-dashboard-tabs-nav-link:before {
+  background-color: #2271b1;
+  opacity: 1;
+  visibility: visible;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-vertical {
+  padding: 0;
+  margin-left: -20px;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-vertical ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+}
+.emoza-dashboard-tabs-nav.emoza-dashboard-tabs-nav-no-negative-margin {
+  margin-bottom: 0;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* Emoza Tabs Content */
+.emoza-dashboard-tab-content {
+  display: none;
+}
+.emoza-dashboard-tab-content.active {
+  display: block;
+}
+
+/* Emoza Dashboard Card */
+.emoza-dashboard-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  background-color: #FFF;
+  padding: 20px;
+  border: 1px solid #F0F0F1;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+.emoza-dashboard-card .emoza-dashboard-card-header h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
+.emoza-dashboard-card .emoza-dashboard-card-body p {
+  margin: 0;
+}
+.emoza-dashboard-card .emoza-dashboard-card-body p + p {
+  margin-top: 15px;
+}
+.emoza-dashboard-card .emoza-dashboard-card-body p + a {
+  margin-top: 20px;
+}
+.emoza-dashboard-card .emoza-dashboard-card-body.emoza-dashboard-card-body-content-with-dividers > div + div {
+  padding-top: 25px;
+  margin-top: 25px;
+  border-top: 1px solid #D9D9D9;
+}
+.emoza-dashboard-card + .emoza-dashboard-card {
+  margin-top: 20px;
+}
+.emoza-dashboard-card.emoza-dashboard-card-top-spacing {
+  padding: 106px 20px 20px 20px;
+}
+.emoza-dashboard-card.emoza-dashboard-card-no-box-shadow {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard-card.emoza-dashboard-card-tabs-divider {
+  position: relative;
+}
+.emoza-dashboard-card.emoza-dashboard-card-tabs-divider:before {
+  content: "";
+  position: absolute;
+  top: 73px;
+  left: 20px;
+  width: calc(100% - 40px);
+  border-bottom: 1px solid #F0F0F1;
+}
+
+.emoza-dashboard-sticky-wrapper .emoza-dashboard-card {
+  gap: 10px;
+}
+.emoza-dashboard-sticky-wrapper .emoza-dashboard-card p {
+  color: #757575;
+}
+
+/* Alert */
+.emoza-dashboard-alert {
+  background-color: #fbfbfb;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.emoza-dashboard-alert p {
+  margin: 0;
+}
+.emoza-dashboard-alert.emoza-dashboard-alert-with-icon {
+  position: relative;
+  padding-left: 50px;
+}
+.emoza-dashboard-alert.emoza-dashboard-alert-with-icon .alert-icon {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+  max-width: 17px;
+}
+.emoza-dashboard-alert.emoza-dashboard-alert-with-icon .alert-icon svg {
+  width: 100%;
+  height: auto;
+}
+.emoza-dashboard-alert.emoza-dashboard-alert-with-upsell-link {
+  padding-right: 160px;
+}
+.emoza-dashboard-alert.emoza-dashboard-alert-with-upsell-link .emoza-dashboard-external-link {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+}
+
+/* Admin Footer */
+#wpfooter {
+  color: #1D2327;
+  font-style: italic;
+}
+#wpfooter a {
+  color: #2271b1;
+}
+#wpfooter a:not(.emoza-dashboard-footer-link) {
+  font-style: normal;
+}
+
+/* Divider */
+.emoza-dashboard-divider {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 0;
+  width: 100%;
+  margin: 5px 0;
+}
+
+/* Card inner header */
+/* Emoza Dashboard Notice */
+.emoza-dashboard-notice {
+  display: none;
+  position: relative;
+  margin-bottom: 20px;
+}
+.emoza-dashboard-notice.show {
+  display: block;
+}
+.emoza-dashboard-notice .dashicons-dismiss {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 38px;
+  height: 38px;
+  font-size: 16px;
+  line-height: 1em;
+  color: #787c82;
+}
+.emoza-dashboard-notice .dashicons-dismiss:hover {
+  color: #d63638;
+}
+
+/* Notifications Sidebar */
+.emoza-dashboard-notifications-sidebar {
+  position: fixed;
+  top: 96px;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+  height: calc(100vh - 92px);
+  background-color: #FFF;
+  -webkit-box-shadow: -10px 12px 14px rgba(0, 0, 0, 0.05);
+          box-shadow: -10px 12px 14px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+  -webkit-transition: ease transform 300ms, ease opacity 300ms;
+  transition: ease transform 300ms, ease opacity 300ms;
+  z-index: 1000;
+}
+.emoza-dashboard-notifications-sidebar.opened {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+          transform: none;
+}
+.emoza-dashboard-notifications-sidebar.closing {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  -webkit-transition: ease opacity 300ms;
+  transition: ease opacity 300ms;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-close:hover {
+  opacity: 0.7;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background-color: #EAEEF2;
+  padding: 20px 22px;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-header .emoza-dashboard-notifications-sidebar-header-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  border: 1px solid #EBEDEF;
+  border-radius: 35px;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-header .emoza-dashboard-notifications-sidebar-header-icon svg {
+  position: relative;
+  top: -2px;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-header .emoza-dashboard-notifications-sidebar-header-content h3 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #2271b1;
+  margin: 0;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-header .emoza-dashboard-notifications-sidebar-header-content p {
+  font-size: 13px;
+  line-height: 18px;
+  color: #757575;
+  margin: 0;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-tabs {
+  position: relative;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-tabs:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: calc(100% - 40px);
+  border-bottom: 1px solid #F0F0F1;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-tabs + .emoza-dashboard-notifications-sidebar-body {
+  max-height: calc(100vh - 232px);
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-body {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-body::-webkit-scrollbar {
+  width: 5px;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-body::-webkit-scrollbar-track {
+  background: #e2e2e2;
+}
+.emoza-dashboard-notifications-sidebar .emoza-dashboard-notifications-sidebar-body::-webkit-scrollbar-thumb {
+  background-color: #CCC;
+}
+
+/* Notifications (card) */
+.emoza-dashboard-notification .emoza-dashboard-notification-date {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  color: #757575;
+}
+.emoza-dashboard-notification .emoza-dashboard-notification-date + .emoza-dashboard-notification-content {
+  margin-top: 20px;
+}
+.emoza-dashboard-notification .changelog-tag {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 18px;
+  color: #FFF;
+  padding: 0px 10px;
+  background-color: #CCC;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.emoza-dashboard-notification .changelog-tag.changelog-added {
+  background-color: #73B189;
+}
+.emoza-dashboard-notification .changelog-tag.changelog-changed {
+  background-color: #F6CA45;
+}
+.emoza-dashboard-notification .changelog-tag.changelog-fixed {
+  background-color: #967BE3;
+}
+.emoza-dashboard-notification .changelog-description {
+  display: block;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #757575;
+  margin-top: 5px;
+}
+.emoza-dashboard-notification .emoza-dashboard-notification-content ul {
+  margin: 0;
+}
+.emoza-dashboard-notification .emoza-dashboard-notification-content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #101517;
+}
+.emoza-dashboard-notification .emoza-dashboard-notification-content ul li + li {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #E7E7E7;
+}
+.emoza-dashboard-notification + .emoza-dashboard-notification {
+  margin: 20px -20px 0px;
+  padding: 20px 20px 0px;
+  border-top: 1px solid #E7E7E7;
+}
+
+/* Emoza Dashboard Hero */
+.emoza-dashboard-hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #FFF;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 30px 24px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-hello {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1e1e1e;
+  margin-top: 16px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-badge {
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-badge-free {
+  color: #3fb28f;
+  background-color: #def3ed;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-badge-pro {
+  color: #fff;
+  background-color: #2271b1;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-desc {
+  color: #1e1e1e;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+@media (min-width: 1280px) {
+  .emoza-dashboard-hero .emoza-dashboard-hero-desc {
+    padding-right: 120px;
+  }
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-customize-button {
+  margin-top: 24px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 10px;
+  margin-top: 25px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-actions .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 18px;
+  line-height: 1em;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-button {
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 2px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-warning {
+  color: #d63638;
+  margin-top: 10px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-notion {
+  color: #697b96;
+  margin-top: 10px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 15px 38px 0 38px;
+}
+.emoza-dashboard-hero .emoza-dashboard-hero-image img {
+  max-width: 365px;
+}
+
+/* Emoza Dashboard Feature Card */
+.emoza-dashboard-feature-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding: 20px;
+  border: 2px solid #F0F0F1;
+  border-radius: 4px;
+  height: 100%;
+  -webkit-transition: ease box-shadow 300ms;
+  transition: ease box-shadow 300ms;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-image {
+  max-width: 40px;
+  height: auto;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-image img {
+  max-width: 100%;
+  height: auto;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-image.emoza-dashboard-feature-card-image-rounded {
+  border-radius: 100%;
+  overflow: hidden;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-image + div {
+  margin-top: 10px;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-title {
+  padding-right: 32px;
+  margin-bottom: 4px;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-title h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-title + .emoza-dashboard-feature-card-actions {
+  margin-top: auto;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-link {
+  font-size: 13px;
+  line-height: 20px;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-link-icon {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: ease opacity 300ms;
+  transition: ease opacity 300ms;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-link-icon svg path {
+  -webkit-transition: ease fill 300ms;
+  transition: ease fill 300ms;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-link-icon.emoza-dashboard-feature-card-link-icon-always-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-link-icon:hover svg path {
+  fill: #2271b1;
+}
+.emoza-dashboard-feature-card .emoza-dashboard-feature-card-link-icon:hover svg circle {
+  stroke: #2271b1;
+}
+.emoza-dashboard-feature-card:hover {
+  -webkit-box-shadow: 0px 8px 12px 0px rgba(240, 240, 241, 0.7);
+          box-shadow: 0px 8px 12px 0px rgba(240, 240, 241, 0.7);
+}
+.emoza-dashboard-feature-card:hover .emoza-dashboard-feature-card-link-icon {
+  opacity: 1;
+  visibility: visible;
+}
+.emoza-dashboard-feature-card:hover .emoza-dashboard-feature-card-link {
+  color: #2271b1;
+  text-decoration: underline;
+}
+
+/* Starter Sites */
+.emoza-dashboard-starter-sites {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 20px;
+}
+.emoza-dashboard-starter-sites .button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emoza-dashboard-starter-sites-locked {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.emoza-dashboard-starter-sites-locked:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.9;
+}
+.emoza-dashboard-starter-sites-locked .button {
+  padding: 10px 30px;
+}
+
+.emoza-dashboard-starter-sites-notice {
+  position: relative;
+  z-index: 2;
+  top: 125px;
+  width: 80%;
+  min-height: 275px;
+  border: 1px solid #e4e4e4;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.emoza-dashboard-starter-sites-notice-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: #1e1e1e;
+}
+
+.emoza-demo-name {
+  font-weight: 600 !important;
+}
+
+@media screen and (max-width: 991px) {
+  .emoza-dashboard-starter-sites .emoza-dashboard-box {
+    display: none;
+  }
+  .emoza-dashboard-starter-sites-locked {
+    position: relative;
+  }
+  .emoza-dashboard-starter-sites-notice {
+    padding: 50px;
+    top: auto;
+    width: 100%;
+  }
+  .emoza-dashboard-starter-sites-notice-text {
+    font-size: 20px;
+  }
+  .emoza-dashboard-starter-sites {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+/**
+ * Templates Builder & Display conditions.
+ *
+ */
+
+.emoza-display-conditions-control {
+  display: inline;
+}
+
+.emoza-display-conditions-control-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emoza-display-conditions-modal-button {
+  width: 100%;
+  text-align: center;
+}
+
+.emoza-display-conditions-modal {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.emoza-display-conditions-modal .emoza-button-close {
+  top: 15px;
+  right: 15px;
+}
+
+.select2-container {
+  z-index: 999999 !important;
+}
+
+.emoza-display-conditions-modal.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emoza-display-conditions-modal .select2-container--default .select2-selection--single {
+  padding: 0;
+  height: 32px;
+}
+
+.emoza-display-conditions-modal .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 32px;
+}
+
+.emoza-display-conditions-modal .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 32px;
+}
+
+.emoza-display-conditions-modal .select2-container--default .select2-selection--single .select2-selection__clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+.emoza-display-conditions-modal .select2-container--default .select2-selection--single .select2-selection__clear span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  border-radius: 14px;
+  font-weight: normal;
+  color: #777;
+  background-color: #eee;
+}
+
+.emoza-display-conditions-modal-outer {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 600px;
+  max-height: 80vh;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 50px 200px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 50px 200px rgba(0, 0, 0, 0.2);
+}
+
+.emoza-display-conditions-modal-header {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 70px;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+  background-color: #fdfdfd;
+}
+
+.emoza-display-conditions-modal-header h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.emoza-display-conditions-modal-header i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.emoza-display-conditions-modal-header i:hover {
+  opacity: 1;
+}
+
+.emoza-display-conditions-modal-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow: auto;
+  padding: 25px;
+}
+
+.emoza-display-conditions-modal-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emoza-display-conditions-modal-content ul li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.emoza-display-conditions-modal-content ul li + li {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.emoza-display-conditions-modal-content ul li.hidden {
+  display: none;
+}
+
+.emoza-display-conditions-select2-type {
+  width: 125px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-preferred-size: 125px;
+  flex-basis: 125px;
+}
+
+.emoza-display-conditions-select2-type .select2-selection:before {
+  content: "+";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: -6px;
+  font-size: 12px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+.emoza-display-conditions-select2-type[data-type=exclude] .select2-selection:before {
+  content: "-";
+}
+
+.emoza-display-conditions-select2-type .select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 25px;
+  padding-right: 20px;
+}
+
+.emoza-display-conditions-select2-groupped {
+  width: calc(100% - 125px - 10px - 32px);
+  -ms-flex-preferred-size: calc(100% - 125px - 10px - 32px);
+  flex-basis: calc(100% - 125px - 10px - 32px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 10px;
+  margin-left: 10px;
+}
+
+.emoza-display-conditions-select2-condition {
+  width: 100%;
+}
+
+.emoza-display-conditions-select2-id {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
+  max-width: 50%;
+}
+
+.emoza-display-conditions-modal-remove {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.emoza-display-conditions-modal-remove:hover {
+  opacity: 1;
+}
+
+.emoza-display-conditions-modal-remove i {
+  color: #a00;
+  font-size: 15px;
+  width: auto;
+  height: auto;
+  line-height: 1em;
+}
+
+.emoza-display-conditions-modal-content-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 15px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emoza-display-conditions-modal-content-footer .button {
+  width: 100%;
+  text-align: center;
+}
+
+.emoza-display-conditions-modal-footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid #eee;
+  background-color: #f7f7f7;
+}
+
+.emoza-display-conditions-modal-footer .emoza-button-save {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.tutorial-video {
+  margin-bottom: 24px;
+  color: #3c434a;
+}
+
+.tutorial-video span {
+  position: relative;
+  top: 2px;
+  font-size: 16px !important;
+}
+
+/* Emoza License Field */
+.emoza-dashboard-license-wrapper h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.emoza-dashboard-license-form {
+  margin-top: 10px;
+}
+.emoza-dashboard-license-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-gap: 10px;
+}
+.emoza-dashboard-license-form form input {
+  width: 400px;
+  max-width: 100%;
+  padding-left: 36px;
+  min-height: 36px;
+}
+.emoza-dashboard-license-form form input::-webkit-input-placeholder {
+  opacity: 0.75;
+}
+.emoza-dashboard-license-form form input::-moz-placeholder {
+  opacity: 0.75;
+}
+.emoza-dashboard-license-form form input:-ms-input-placeholder {
+  opacity: 0.75;
+}
+.emoza-dashboard-license-form form input::-ms-input-placeholder {
+  opacity: 0.75;
+}
+.emoza-dashboard-license-form form input::placeholder {
+  opacity: 0.75;
+}
+.emoza-dashboard-license-form form button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1em;
+  min-height: 36px;
+  padding: 10px 40px !important;
+}
+
+.emoza-license-key-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.emoza-license-key-input i {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: -1px;
+  font-size: 20px !important;
+  color: #5C5F62;
+}
+
+.emoza-dashboard-license-success {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 5px;
+}
+.emoza-dashboard-license-success span {
+  color: #0b890b;
+}
+
+.emoza-dashboard-license-error {
+  margin-top: 10px;
+  color: #d63638;
+}
+
+/* Emoza Dashboard Module Card */
+.emoza-dashboard-module-card .emoza-dashboard-module-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 37px;
+}
+.emoza-dashboard-module-card .emoza-dashboard-module-card-header h2 {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+}
+.emoza-dashboard-module-card .emoza-dashboard-module-card-header .emoza-dashboard-module-card-header-actions {
+  padding-top: 30px;
+}
+
+/* Emoza Dashboard Content Expand */
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-title .emoza-dashboard-content-expand-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #2271b1;
+  background-color: #E8ECFF;
+  padding: 7px;
+  text-decoration: none;
+}
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-title .emoza-dashboard-content-expand-link:after {
+  content: "";
+  background-image: url(../../img/dashboard/chevron.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-left: auto;
+}
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-title .emoza-dashboard-content-expand-link svg {
+  margin-right: 6px;
+}
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-content {
+  border: 1px solid #E8ECFF;
+  padding: 10px 8px;
+}
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  margin: 0;
+}
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-list li {
+  color: #6D7175;
+  margin: 0;
+}
+.emoza-dashboard-content-expand .emoza-dashboard-content-expand-list li svg {
+  margin-top: 5px;
+  margin-right: 7px;
+  min-width: 8px;
+}
+
+/* Free Vs Pro Table */
+.emoza-dashboard-freevspro-table__header {
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+  border-radius: 4px;
+  border: 1px solid #C2CFF8;
+  background-color: #F9FAFE;
+}
+.emoza-dashboard-freevspro-table__header .emoza-dashboard-freevspro-table__column {
+  border-bottom: 0;
+}
+.emoza-dashboard-freevspro-table__header strong {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  color: #1e1e1e;
+  margin: 0;
+}
+
+.emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__column strong {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+.emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__column a {
+  color: #1e1e1e;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__column a:hover {
+  color: #2271b1;
+}
+.emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__column a:focus, .emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__column a:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.emoza-dashboard-freevspro-table__body .dashicons-external {
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  margin-left: 3px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.emoza-dashboard-freevspro-table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emoza-dashboard-freevspro-table__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  max-width: 275px;
+  padding: 17px 23px;
+  text-align: center;
+  border-bottom: 1px solid #E3E8F7;
+}
+.emoza-dashboard-freevspro-table__column strong {
+  font-weight: 500;
+  text-align: left;
+  color: #1e1e1e;
+}
+.emoza-dashboard-freevspro-table__column .emoza-dashboard-freevspro-table__icon {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.emoza-dashboard-freevspro-table__column .emoza-dashboard-freevspro-table__icon_break {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  opacity: 0.3;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+.emoza-dashboard-freevspro-table__column .dashicons-saved {
+  text-indent: -2px;
+  color: #3FB28F;
+  background-color: rgba(63, 178, 143, 0.1);
+}
+.emoza-dashboard-freevspro-table__column .dashicons-no-alt {
+  color: #E62424;
+  background-color: rgba(230, 36, 36, 0.05);
+}
+.emoza-dashboard-freevspro-table__column.emoza-dashboard-freevspro-table__column--feature {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  max-width: none;
+  text-align: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-gap: 6px;
+}
+
+.emoza-dashboard-freevspro-table__spacing {
+  margin-left: 10px;
+}
+
+.emoza-dashboard-freevspro-table__desc {
+  font-size: 12px;
+  font-style: italic;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.emoza-dashboard-freevspro-table__row + .emoza-dashboard-freevspro-table__row .emoza-dashboard-freevspro-table__column,
+.emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__row:first-child .emoza-dashboard-freevspro-table__column {
+  border-top-width: 0;
+}
+
+.emoza-dashboard-freevspro-table__body .emoza-dashboard-freevspro-table__row:last-child .emoza-dashboard-freevspro-table__column {
+  border-bottom: 0;
+}
+
+.emoza-dashboard-freevspro-upsell-wrapper {
+  text-align: right;
+}
+.emoza-dashboard-freevspro-upsell-wrapper .button {
+  width: 100%;
+  max-width: 252px;
+}
+
+@media screen and (max-width: 991px) {
+  .emoza-dashboard-freevspro-table__header {
+    position: relative;
+    top: auto;
+  }
+  .emoza-dashboard-freevspro-table__header strong {
+    font-size: 16px;
+  }
+  .emoza-dashboard-freevspro-table-responsive {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .emoza-dashboard-freevspro-table__column--feature:first-child {
+    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .emoza-dashboard-freevspro-table__column {
+    padding: 15px 10px;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 100px;
+  }
+  .emoza-dashboard-freevspro-table__column:not(:first-child) strong {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Navigation Links */
+.em-navigation-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3px;
+  margin: 0;
+}
+.em-navigation-links li {
+  margin: 0;
+}
+.em-navigation-links li a {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #212121;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  padding: 9px 16px;
+}
+.em-navigation-links li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  width: 4px;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: ease opacity 200ms;
+  transition: ease opacity 200ms;
+}
+.em-navigation-links li a:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.em-navigation-links li a svg {
+  width: 18px;
+}
+.em-navigation-links li.active a {
+  color: #2271b1;
+}
+.em-navigation-links li.active a:before {
+  background-color: #2271b1;
+  opacity: 1;
+  visibility: visible;
+}
+.em-navigation-links li.active a svg {
+  fill: #2271b1;
+}
+
+/* Presets List */
+.em-presets-list {
+  margin-top: 15px;
+}
+.em-presets-list__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 0px 20px;
+}
+.em-presets-list__header strong {
+  width: 33.3333%;
+}
+.em-presets-list__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.em-presets-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #f0f0f1;
+  border-radius: 6px;
+  padding: 15px 20px;
+  -webkit-transition: ease border-color 250ms;
+  transition: ease border-color 250ms;
+}
+.em-presets-list__item p {
+  margin: 0;
+}
+.em-presets-list__item p, .em-presets-list__item div {
+  width: 33.3333%;
+}
+.em-presets-list__item .button {
+  padding: 7px 17px;
+}
+.em-presets-list__item .button + .button {
+  margin-left: 10px;
+}
+.em-presets-list__item:hover {
+  border-color: #e1e1e1;
+}
+.em-presets-list__add-button {
+  padding: 7px 17px !important;
+  margin-top: 20px !important;
+}
+
+.emoza-dashboard {
+  /* Base control */
+  /* Control input */
+  /* Help label */
+  /* Radio Control */
+  /* Number Control */
+  /* Select Control */
+  /* Panel body */
+  /* Add new panel */
+  /* Field terms wrapper */
+  /* Custom Color Picker */
+  /* Select */
+  /* Filter actions */
+}
+.emoza-dashboard .components-base-control {
+  width: 100%;
+}
+.emoza-dashboard .components-text-control__input {
+  height: 38px !important;
+}
+.emoza-dashboard .components-base-control__help {
+  color: #757575;
+  font-size: 13px;
+}
+.emoza-dashboard .components-radio-control .components-base-control__label,
+.emoza-dashboard .components-radio-control .components-radio-control__label {
+  max-width: 100%;
+}
+.emoza-dashboard .components-radio-control .components-base-control__help {
+  margin-bottom: 10px;
+}
+.emoza-dashboard .components-number-control .components-base-control__help {
+  margin-bottom: 10px;
+}
+.emoza-dashboard .components-number-control .components-input-control__container {
+  max-width: 60px;
+}
+.emoza-dashboard .components-select-control .components-input-control__container {
+  max-width: 60%;
+}
+.emoza-dashboard .components-panel__body {
+  border-top: 0 !important;
+  -webkit-transition: ease margin-top 250ms, ease opacity 250ms;
+  transition: ease margin-top 250ms, ease opacity 250ms;
+}
+.emoza-dashboard .components-panel__body.is-drag-hovering {
+  margin-top: 75px;
+}
+.emoza-dashboard .components-panel__body.is-drag-active-item {
+  opacity: 0;
+}
+.emoza-dashboard .emsf-add-new-panel-button {
+  padding: 7px 25px;
+  margin: 15px;
+}
+.emoza-dashboard .emsf-field-terms-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.emoza-dashboard .emsf-field-terms-wrapper .components-base-control {
+  width: 100%;
+}
+.emoza-dashboard .emsf-custom-color-picker {
+  width: 100%;
+}
+.emoza-dashboard .emsf-custom-color-picker > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.emoza-dashboard .emsf-custom-color-picker > div > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.emoza-dashboard .emsf-components-select__add-all, .emoza-dashboard .emsf-components-select__remove-all {
+  margin-top: 10px;
+}
+.emoza-dashboard .emsf-components-select__add-all {
+  margin-right: 10px;
+}
+.emoza-dashboard .emsf-filter-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.emoza-dashboard .emsf-filter-actions__dragger {
+  position: relative;
+  top: 2px;
+}
