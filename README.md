@@ -19,18 +19,22 @@ La plataforma cuenta con una navegación intuitiva, que incluye secciones como "
 - ✔️ 
 
 ## 🔧 Tecnologías Utilizadas
-- 🌐 WordPress como sistema de gestión de contenidos (CMS)
-- 🎨 css
-- 🔥 XAMPP como entorno de desarrollo local
-- 🐬 MySQL para base de datos
-- 🖥️ Apache como servidor web
+## 🔧 Tecnologías Utilizadas
+
+- 🌐 **WordPress** como sistema de gestión de contenidos (CMS)  
+- 🐘 **PHP** para lógica y funcionalidades backend  
+- � **CSS** y **SCSS** para estilos y diseño responsive  
+- 📜 **JavaScript** para interactividad dinámica  
+- 📄 **HTML** y **Handlebars** para estructura y plantillas  
+- 🔥 **XAMPP** (entorno local con Apache, MySQL y PHP)  
+- 🐬 **MySQL** como base de datos relacional  
 
 
 ## 🔌 Plugins
-- 🛒 WooCommerce para funcionalidad de e-commerce
-- 🔧 Elementor para diseño y maquetación visual
-- 💳 Integración de MercadoPago como pasarela de pagos
-- 📝 WPForms para formularios de contacto y registro
+- 🛒 **WooCommerce** para funcionalidad de e-commerce
+- 🔧 **Elementor** para diseño y maquetación visual
+- 💳 **Integración** de MercadoPago como pasarela de pagos
+- 📝 **WPForms** para formularios de contacto y registro
 
 ## 📦 Instalación
 1. Clona el repositorio  
