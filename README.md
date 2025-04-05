@@ -18,7 +18,6 @@ La plataforma cuenta con una navegación intuitiva, que incluye secciones como "
 - ✔️ Página de inicio con banners promocionales y llamadas a la acción 
 
 ## 🔧 Tecnologías Utilizadas
-## 🔧 Tecnologías Utilizadas
 
 - 🌐 **WordPress** como sistema de gestión de contenidos (CMS)  
 - 🐘 **PHP** para lógica y funcionalidades backend  
