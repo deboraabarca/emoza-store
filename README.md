@@ -15,8 +15,7 @@ La plataforma cuenta con una navegación intuitiva, que incluye secciones como "
 - ✔️ Integraciones con herramientas populares
 - ✔️ Sistema de carrito de compras integrado (visible con contador "0" en la barra superior)
 - ✔️ Funcionalidad de búsqueda de productos
-- ✔️ Página de inicio con banners promocionales y llamadas a la acción
-- ✔️ 
+- ✔️ Página de inicio con banners promocionales y llamadas a la acción 
 
 ## 🔧 Tecnologías Utilizadas
 ## 🔧 Tecnologías Utilizadas
