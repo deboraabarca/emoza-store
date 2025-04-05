@@ -45,7 +45,6 @@ La plataforma cuenta con una navegación intuitiva, que incluye secciones como "
 
    - Descarga WordPress desde wordpress.org.
    
-   - npm install
    - Extrae el archivo descargado y coloca el contenido en tu servidor local (por ejemplo, en la carpeta htdocs si usas XAMPP).
    
 1. Configura la base de datos 
